@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chris Hansen</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="./css/styles.scss">
+</head>
+<body>
+        
+    <!-- logo -->
+    <div id="logo"><a href="./index.html">Chris Hansen<br>UX Engineer</a></div>
+    <!-- slide in overlay hamburger menu -->
+    <div id="navigationBtn"><i class="fas fa-hamburger"></i></div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#" class="nav-link">home</a></li>
+                <li><a href="#" class="nav-link">about</a></li>
+                <li><a href="#" class="nav-link">contact</a></li>
+            </ul>
+        </nav>
+
+    <div class="splash">
+        <div class="animation-area">
+            <ul class="box-area">
+                <li><img src="http://www.pngmart.com/files/6/Maple-Leaf-PNG-Transparent-1.png" alt=""></li>
+                <li><img src="http://www.pngpix.com/wp-content/uploads/2016/07/PNGPIX-COM-Autumn-Leaf-PNG-Transparent-Image-500x493.png" alt=""></li>
+                <li><img src="http://pluspng.com/img-png/autumn-leaves-hd-png--3101.png" alt=""></li>
+                <li><img src="http://www.pngmart.com/files/6/Maple-Leaf-PNG-Transparent-1.png" alt=""></li>
+                <li><img src="http://www.pngpix.com/wp-content/uploads/2016/07/PNGPIX-COM-Autumn-Leaf-PNG-Transparent-Image-500x493.png" alt=""></li>
+                <li><img src="http://pluspng.com/img-png/autumn-leaves-hd-png--3101.png" alt=""></li>
+            </ul>
+        </div>
+        <span data-text="pro" class="splash-text">Chris Hansen <br> UX Engineer</span>
+        <a href="#about"><i class="fas fa-chevron-down animated fadeIn" style="animation-delay: 1s"></i></a>
+    </div>
+
+    <main>
+        <section id="about" class="about">
+            <div class="content">
+                <div class="about-title"><span>doing what i</span> <i class="far fa-heart animated bounceInUp" style="animation-delay: 3s"></i></div>
+                <div class="typed-box">
+                    <h1>Hello world. I'm <span class="fullname">Chris Hansen</span>.<br><span class="typed">Frontend Developer</span></h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatibus consectetur obcaecati expedita perspiciatis, commodi totam alias ducimus necessitatibus recusandae, quia qui voluptates suscipit assumenda reiciendis voluptas ullam vero nulla.</p>
+                </div>
+            </div>
+            <!-- <h1 class="skyline">San Francisco</h1> -->
+        </section>
+
+        <div id="skills">
+            <div class="skill-map">
+                <h3>skill map</h3>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        var navBtn = document.getElementById('navigationBtn');
+        var nav = document.getElementById('nav');
+        navBtn.addEventListener('click', toggleNav);
+        function toggleNav() {
+            nav.style.width = "100%";
+            if(nav.style.width = "100%") {
+                navBtn.addEventListener('click', closeNav);
+                function closeNav() {
+                    nav.style.width = "0%";
+                }
+            }
+        }
+        
+        // typed
+        const text = ["A Frontend Developer", "A Fullstack Engineer", "A UX Engineer", "Or lastly A UI Designer"];
+        let count = 0;
+        let index = 0;
+        let currentTxt = "";
+        let letter = "";
+
+        (function type() {
+            if(count === text.length) { //3
+                count = 0;
+            }
+            currentTxt = text[count];
+            letter = currentTxt.slice(0, ++index);
+
+            document.querySelector('.typed').textContent = letter;
+            if(letter.length === currentTxt.length) {
+                count++;
+                index = 0;
+            }
+            setTimeout(type, 250);
+        }());
+
+    </script>
+</body>
+</html>

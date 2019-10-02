@@ -1,0 +1,315 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+$offBlack: #333;
+$black: #000;
+$red: tomato;
+$blue: #1e90ff;
+$offWhite: #eee;
+$white: #FFF;
+$textImage: url('https://images.unsplash.com/photo-1470175369463-7bb9f41e614b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80');
+$portraitImage: url('https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=734&q=80');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    height: 100%;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+// helper classes
+.line-through {
+    text-decoration: line-through;
+}
+
+// navigation
+
+#nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: $offBlack;
+    z-index: 99999;
+    // transform: translateX(-100%);
+    overflow-x: hidden;
+    transition: .3s;
+        ul {
+            list-style: none;
+            text-align: center;
+                li {
+
+                    a {
+                        color: $offWhite;
+                        font-size: 2em;
+                        padding: .5em;
+                        text-decoration: none;
+                    }
+                }
+        }
+}
+
+.splash {
+    height: 100vh;
+    background: $offBlack;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 1em;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, $offBlack, $offWhite, $offBlack);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 999;
+    animation: animatelogo 3s linear;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+        -webkit-animation: 0;
+        background-size: 100%;
+        overflow: visible;
+    }
+}
+@keyframes animatelogo {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position:  500%;
+    }
+}
+
+#navigationBtn {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2em;
+    color: $red;
+    z-index: 99999999;
+    transition: .3s;
+    cursor: pointer;
+        &:hover {
+            transform: scale(1.2);
+        }
+}
+
+#navigationBtn:hover #nav {
+    transform: translateX(100%);
+}
+
+.fa-chevron-down {
+    margin: 0;
+    padding: 0;
+    color: $red;
+    font-size: 3em;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5%);
+    cursor: pointer;
+}
+
+// text responsiblity
+.splash-text {
+    // background-image: $portraitImage;
+    background-image: $portraitImage; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.splash-text {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) skewY(-10deg);
+    -ms-transform: translateX(-50%) translateY(-50%) skewY(-10deg);
+    -o-transform: translateX(-50%) translateY(-50%) skewY(-10deg);
+    background-size: cover;
+    white-space: wrap;
+    background-position: center;
+    background-repeat: repeat;
+    text-align: center;
+    text-transform: uppercase;
+    overflow-y: hidden;
+    font: 12vmax/.82 Open Sans, impact; // fatens font
+    @media(max-width: 900px) {
+        font: 13vmax/.85 Open Sans, impact;
+        font-size: 9em;
+    }
+    @media(max-width: 720px) {
+        font: 13vmax/.85 Open Sans, impact;
+        font-size: 7em;
+    }
+    animation: glitch 5s linear 1;
+}
+
+@keyframes glitch {
+    0% {
+        // filter: blur(20);
+        // filter: brightness(0)
+        // filter: blur(10px) hue-rotate(90deg);
+        filter: hue-rotate(90deg);
+    }
+    100% {
+        // filter: blur(0);
+        // filter: brightness(100%)
+        // filter: blur(0) hue-rotate(0)
+        filter: hue-rotate(0);
+    }
+}
+
+// about
+
+section.about {
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    background: $offWhite;
+
+
+        .content {
+            height: 100%;
+            margin-bottom: 100px;
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            color: $offBlack;
+            text-transform: uppercase;
+
+            .about-title {
+                padding: 50px 0;
+                font: 19vmax/.82 Open Sans, impact;
+                font-weight: bold;
+                font-size: 2em;
+                color: $offBlack;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                span, .fa-heart {
+                    font-size: 3em;
+                }
+                    .fa-heart {
+                        color: $red;
+                    }
+            }
+        }
+}
+
+// typed animation
+.typed-box {
+    h1 {
+        padding-bottom: 25px;
+    }
+    .typed {
+        background: linear-gradient(to right, $offBlack, $red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+}
+
+// splash animation
+
+.animation-area {
+    height: 100%;
+    width: 100%;
+}
+
+.box-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.box-area li {
+    position: absolute;
+    top: -500px;
+    display: block;
+    list-style: none;
+    // background: rgba(255,255,255,.1);
+    animation: animateBackground 20s linear infinite;
+
+}
+
+.box-area li:nth-child(1) {
+    left: 32%;
+    animation-delay: 1s;
+}
+
+.box-area li:nth-child(2) {
+    left: 12%;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+    z-index: 999;
+}
+
+.box-area li:nth-child(3) {
+    left: 90%;
+    animation-delay: 1s;
+    animation-duration: 10s;
+}
+
+.box-area li:nth-child(4) {
+    left: 70%;
+    animation-delay: 5s;
+}
+
+.box-area li:nth-child(5) {
+    left: 15%;
+    animation-delay: 0;
+}
+
+.box-area li:nth-child(6){
+    left: 50%;
+    animation-delay: 3s;
+    z-index: 999;
+}
+
+.box-area li:nth-child(7) {
+    left: 2%;
+    animation-delay: 2s;
+}
+
+@keyframes animateBackground {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(200vh) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+
+
+#skills {
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+}
