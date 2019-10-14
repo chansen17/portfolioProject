@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../images/wp-about.jpeg":[["wp-about.f85b191c.jpeg","images/wp-about.jpeg"],"images/wp-about.jpeg"],"./../images/prjo-1.jpg":[["prjo-1.691e6d23.jpg","images/prjo-1.jpg"],"images/prjo-1.jpg"],"./../images/prjo-2.jpg":[["prjo-2.53995944.jpg","images/prjo-2.jpg"],"images/prjo-2.jpg"],"./../images/prjo-3.jpg":[["prjo-3.945aa8ea.jpg","images/prjo-3.jpg"],"images/prjo-3.jpg"],"./../images/netflix-concept.png":[["netflix-concept.a87e049b.png","images/netflix-concept.png"],"images/netflix-concept.png"],"./../images/legend.png":[["legend.1c94c954.png","images/legend.png"],"images/legend.png"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60724" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64016" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

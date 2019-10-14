@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chris Hansen</title>
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <!-- animate.css -->
@@ -14,69 +16,287 @@
 <body>
         
     <!-- logo -->
-    <div id="logo"><a href="/index.html">Chris Hansen<br>UX Engineer</a></div>
+    <div id="logo"><a href="/index.html">Chris Hansen<br>Frontend Developer</a></div>
+    <ul class="home-icons">
+        <li><a href="https://www.github.com"><i class="fab fa-github icon"></i></a></li>
+        <li><a href="#contact"><i class="far fa-envelope"></i></a></li>
+    </ul>
     <!-- slide in overlay hamburger menu -->
-    <div id="navigationBtn"><i class="fas fa-hamburger"></i></div>
+    <div id="navigationBtn"><i class="fas fa-bars"></i></div>
         <nav id="nav">
+                <!-- <div class="animation-area">
+                    <ul class="box-area">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div> -->
             <ul>
-                <li><a href="#" class="nav-link">home</a></li>
-                <li><a href="#" class="nav-link">about</a></li>
-                <li><a href="#" class="nav-link">contact</a></li>
+                <li><a href="/index.html" class="nav-link">home</a></li>
+                <li><a href="#about" class="nav-link">about</a></li>
+                <li><a href="#projects" class="nav-link">contact</a></li>
             </ul>
         </nav>
 
     <div class="splash">
-        <div class="animation-area">
+        <!-- <div class="animation-area">
             <ul class="box-area">
-                <li><img src="http://www.pngmart.com/files/6/Maple-Leaf-PNG-Transparent-1.png" alt=""></li>
-                <li><img src="http://www.pngpix.com/wp-content/uploads/2016/07/PNGPIX-COM-Autumn-Leaf-PNG-Transparent-Image-500x493.png" alt=""></li>
-                <li><img src="http://pluspng.com/img-png/autumn-leaves-hd-png--3101.png" alt=""></li>
-                <li><img src="http://www.pngmart.com/files/6/Maple-Leaf-PNG-Transparent-1.png" alt=""></li>
-                <li><img src="http://www.pngpix.com/wp-content/uploads/2016/07/PNGPIX-COM-Autumn-Leaf-PNG-Transparent-Image-500x493.png" alt=""></li>
-                <li><img src="http://pluspng.com/img-png/autumn-leaves-hd-png--3101.png" alt=""></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
+        </div> -->
+        <div class="fs-video">
+            <video autoplay="" muted="" loop="">
+                <source src="/code-video.772b7f8a.mp4" type="video/mp4">
+            </video>
         </div>
-        <span data-text="pro" class="splash-text">Chris Hansen <br> UX Engineer</span>
-        <a href="#about"><i class="fas fa-chevron-down animated fadeIn" style="animation-delay: 1s"></i></a>
+        <span class="splash-text">Chris Hansen <br> Frontend Developer</span>
+        <div class="splash-intro animated fadeIn" style="animation-delay: 2s">
+            <p>Hey, I'm Chris, a frontend developer based in the SF Bay area focusing on creating beautiful websites and web apps.</p>
+        </div>
+        <div>
+        </div>
+        <a href="#skills"><i class="fas fa-chevron-down animated fadeIn"></i></a>
     </div>
 
+    <!-- <div class="cta">
+        <div class="overlay"></div>
+        <a href="mailto:chansenwebdev@gmail.com">contact me</a>
+    </div> -->
+
     <main>
-        <section id="about" class="about">
-            <div class="content">
-                <div class="about-title"><span>doing what i</span> <i class="far fa-heart animated bounceInUp" style="animation-delay: 3s"></i></div>
-                <div class="typed-box">
-                    <h1>Hello world. I'm <span class="fullname">Chris Hansen</span>.<br><span class="typed">Frontend Developer</span></h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatibus consectetur obcaecati expedita perspiciatis, commodi totam alias ducimus necessitatibus recusandae, quia qui voluptates suscipit assumenda reiciendis voluptas ullam vero nulla.</p>
+
+        <section id="skills">
+            <h1 class="skills-title">Skills</h1>
+            <div class="skills-container">
+                <div data-aos="fade-left" class="general-skills">
+                    <div class="gs">
+                        <img src="/frontend-2.53e1eda1.svg" alt="frontend development">
+                        <h1>Frontend Development</h1>
+                        <p>My passion for the web begins with front end development. With modern HTML5, CSS3, and Javascript, 
+                            and frameworks like React and Vue, I help power the web for users to interact with and enjoy. 
+                        </p>
+                    </div>
+                    <div class="gs">
+                        <img src="/mobile-2.fe4fd3c6.svg" alt="mobile and responsive design">
+                        <h1>Responsive design</h1>
+                        <p>Modern web browsing requires modern web development. Today, mobile web browsing exceeds
+                            desktop browsing, therefore I make sure the web is a great experience across all devices.
+                        </p>
+                    </div>
+                    <div class="gs">
+                        <img src="/designer.44ab48bc.svg" alt="user interface design">
+                        <h1>UI Design</h1>
+                        <p>Maximizing usability and the user experience starts with great User Interface design. </p>
+                    </div>
+                    <div class="gs">
+                        <img src="/interaction.1fbd35b1.svg" alt="user experience design">
+                        <h1>UX | Interaction Design</h1>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo!
+                    </div>
+                    <div class="gs">
+                        <img src="/programmer.65be6a2f.svg" alt="nodejs programmer">
+                        <h1>Node.js</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet facilis voluptatibus nulla!</p>
+                    </div>
+                    <div class="gs">
+                        <img src="/code.53155bda.svg" alt="design to code">
+                        <h1>Mockup to Code</h1>
+                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, libero?</p>       
+                    </div>
+                </div>
+                <div data-aos="fade-right" class="cards">
+                    <div class="card">
+                        <div class="card-header"><i class="fab fa-html5 icon"></i></div>
+                        <div class="card-body">Using modern html5 for better symantic tags and structuring content</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fab fa-css3-alt icon"></i></div>
+                        <div class="card-body">Adding modern styles using css3 with powerful new features like animations and keyframes</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fab fa-js-square icon"></i></div>
+                        <div class="card-body">Modern es6 on the front and backend. From powerful user interactions on the front end, to an entire backend written in javascript.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fab fa-react icon"></i></div>
+                        <div class="card-body">Popular and powerful frontend framework created by Facebook for laying out user interfaces with JSX and native mobile apps.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fab fa-vuejs icon"></i></div>
+                        <div class="card-body">Popular and powerful frontend framework with popular features like data-binding and typescript for creating powerful websites and native mobile apps.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fab fa-sass icon"></i></div>
+                        <div class="card-body">css pre-compiler allowing cleaner more effecient css code for styling webpages and apps.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fab fa-github icon"></i></div>
+                        <div class="card-body">store your code</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fab fa-git icon"></i></div>
+                        <div class="card-body">version control</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fab fa-npm icon"></i></div>
+                        <div class="card-body">node packet manager for javascript. </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fas fa-magic icon"></i></div>
+                        <div class="card-body">User Experience / interaction design</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fas fa-database icon"></i></div>
+                        <div class="card-body">Mongodb, firebase, and local storage databases</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fab fa-adobe icon"></i></div>
+                        <div class="card-body">Mockups and wireframe layouts in Adobe XD</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><i class="fas fa-globe-americas icon"></i></div>
+                        <div class="card-body">Hosting and pulishing websites to the world wide web.</div>
+                    </div>
                 </div>
             </div>
-            <!-- <h1 class="skyline">San Francisco</h1> -->
+                         
         </section>
 
-        <div id="skills">
-            <div class="skill-map">
-                <h3>skill map</h3>
+        <section data-aos="fade-right" id="about" class="about">
+            <div class="overlay-blur">
+                <div class="content">
+                    <div class="about-title"><span>doing what i</span> <i class="far fa-heart animated bounceInUp" style="animation-delay: 3s"></i></div>
+                    <div class="about-description">
+                        <h1>Hey, I'm Chris Hansen.</h1>
+                        <p>Using my passion for code, design and UX development, <br>
+                        I focus on creating beautiful websites and web apps.</p>
+                        <p>My passion for front-end develoment began after my first program..</p>
+                        <div class="typed"></div>
+                        <br>
+                        <p>The rest is history..</p>
+                    </div>
+                </div><!-- end content -->
             </div>
-        </div>
+        </section>
+
+        <section data-aos="fade" id="projects">
+            <h1 class="projects-title">Projects</h1>
+            <ul class="projects">
+                <li>
+                    <div class="content">
+                        <h2 class="project-title">React fullstack with Next.js meetup app</h2>
+                        <p>Fullstack React on the server side application meetup with authentication, potential
+                            to login, create meetup, and also find other meetups.
+                        </p>
+                        <span><a href="https://www.github.com"><i class="fab fa-github"></i></a></span>
+                        <span><a href="#"><i class="fas fa-globe"></i></a></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="content">
+                        <h2 class="project-title">React firebase cloud storage daily task app</h2>
+                        <p>Simple but effecient Daily task manager with persistant local storage</p>
+                        <span><a href="https://www.github.com"><i class="fab fa-github"></i></a></span>
+                        <span><a href="#"><i class="fas fa-globe"></i></a></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="content">
+                        <h2 class="project-title">React Recipe finder app</h2>
+                        <p>React mobile application allowing users to find recipes with specific ingredients</p>
+                        <span><a href="https://www.github.com"><i class="fab fa-github"></i></a></span>
+                        <span><a href="#"><i class="fas fa-globe"></i></a></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="content">
+                        <div class="content">
+                            <h2 class="project-title">Netflix concept</h2>
+                            <p>UI Design for Netflix concept focusing on Close Encounters of the Third Kind.</p>
+                            <span><a href="https://www.github.com"><i class="fab fa-github"></i></a></span>
+                        <span><a href="#"><i class="fas fa-globe"></i></a></span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="content">
+                        <h2 class="project-title">Legend Bicycles landing page concept</h2>
+                        <p>UI Design for company concept landing page using Adobe XD
+                        </p>
+                        <span><a href="https://www.github.com"><i class="fab fa-github"></i></a></span>
+                        <span><a href="#"><i class="fas fa-globe"></i></a></span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <!-- <h1 class="contact-title">Contact</h1> -->
+                <div class="contact-container">
+                    <div>
+                    <form data-aos="fade-right" id="form" name="form" accept-charset="utf-8" action="https://formspree.io/chansenwebdev@gmail.com" method="post">
+                        <fieldset>
+                          <input type="text" name="name" placeholder="First and Last*" required="Please enter your first and last name">
+                          <input type="email" name="_replyto" placeholder="youremail@domain.com*" required="Please enter a valid email">
+                          <input type="text" name="_gotcha" style="display:none">
+                          <textarea rows="5" name="message" placeholder="Please enter your message!*" required="Whoops! Don't forget your message!"></textarea>
+                          <input type="hidden" name="_subject" value="Contact Form Submission">
+                        </fieldset>
+                        <input type="submit" value="Submit">
+                      </form>
+                    </div>
+                    <div data-aos="fade-left" class="outro">
+                        <h2>You reached the bottom, thanks!</h2>
+                        <p>I'm looking foward to building something great together.</p>
+                        <div> 
+                            <ul class="media-list">
+                                <li><a target="_blank" href="https:www.github.com"><i class="fab fa-github media-icon"></i></a></li>
+                                <span>Github</span>
+                                <li><a target="_blank" href="https://www.behance.com"><i class="fab fa-behance media-icon"></i></a></li>
+                                <span>Behance</span>
+                                <li><a target="_blank" href="https://www.pexels.com"><i class="fas fa-camera media-icon"></i></a></li>
+                                <span>Photography</span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="footer">
+                    <footer>Hansen crafted by <span>Chris Hansen</span> &copy; 2019</footer>
+            </section>
     </main>
 
-    <script>var navBtn = document.getElementById('navigationBtn');
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({
+  duration: 1000
+});
+var navBtn = document.getElementById('navigationBtn');
 var nav = document.getElementById('nav');
 navBtn.addEventListener('click', toggleNav);
 
-function toggleNav() {
-  nav.style.width = "100%";
+function toggleNav(e) {
+  nav.classList.toggle('nav-active');
+}
 
-  if (nav.style.width = "100%") {
-    var closeNav = function closeNav() {
-      nav.style.width = "0%";
-    };
+var headerBG = document.querySelector('.splash');
+window.addEventListener('scroll', function () {
+  headerBG.style.opacity = 1 - +window.pageYOffset / 600 + '';
+}); // typed
 
-    navBtn.addEventListener('click', closeNav);
-  }
-} // typed
-
-
-var text = ["A Frontend Developer", "A Fullstack Engineer", "A UX Engineer", "Or lastly A UI Designer"];
+var text = ["Hello world."];
 var count = 0;
 var index = 0;
 var currentTxt = "";
@@ -97,7 +317,7 @@ var letter = "";
     index = 0;
   }
 
-  setTimeout(type, 250);
+  setTimeout(type, 500);
 })();</script>
 </body>
 </html>
